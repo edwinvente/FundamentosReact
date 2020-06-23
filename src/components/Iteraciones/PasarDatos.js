@@ -1,0 +1,51 @@
+import React, { Component } from 'react'
+
+class PasarDatos extends Component{
+    
+    state = {
+        fruits: [
+          { name: 'Fresa', price: 5.4 },
+          { name: 'Manzana', price: 2.3 },
+          { name: 'Sandia', price: 1.2 },
+          { name: 'Guayaba', price: 5 },
+          { name: 'Pera', price: 4.12 },
+          { name: 'Kiwi', price: 3.87 },
+          { name: 'Limon', price: 7.21 },
+          { name: 'Melon', price: 6.21 },
+          { name: 'Cereza', price: 4.98 }
+        ],
+    
+        frutaSeleccionada: {}
+      }
+    
+    select = (frutaSeleccionada, event) => {
+        this.setState({frutaSeleccionada})
+    }
+
+    render(){
+
+        const {fruits, frutaSeleccionada} = this.state
+
+        return(
+            <div>
+                <ul>
+                {fruits.map((fruit, i) => (
+                    <li 
+                        key={i + fruit.name}
+                        onClick={this.select.bind(this, fruit)}
+                        style={{ 
+                            color: frutaSeleccionada.name === fruit.name
+                            ? 'red'
+                            : '#000'
+                         }}
+                    >
+                        {fruit.name} - $ {fruit.price}
+                    </li>
+                ))}
+                </ul>
+            </div>
+        )
+    }
+}
+
+export default PasarDatos
