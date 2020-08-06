@@ -1,1 +1,1 @@
-export {default} from './PropChildren'
+export {default} from './ComposicionImplicita'

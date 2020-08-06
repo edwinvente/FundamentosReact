@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import './App.css';
 import TarjetaFruta from './components/TarjetaFruta';
 import Mutacion from './components/Mutacion'
@@ -21,6 +21,11 @@ import DevTools from './components/DevTools'
 import Error from './components/Errores'
 import Http from './components/HttpRequest'
 import Constructor from './components/CiclosDeVida'
+//import Comunicacion from './components/ComposicionyComunicacion'
+import HOOKS from './components/HOOKS'
+import Example from './components/codeSplitingReactLazy' 
+import Transition from './components/AnimacionesyTransicciones'
+import StyleComponents from './components/StyleComponents'
 
 class App extends Component{
   
@@ -40,8 +45,13 @@ class App extends Component{
 
     return(
       <div>
-        <Constructor/>
+        <StyleComponents />
         {/*
+        <Transition />
+        <Example />
+        <PropChildren/>
+        <HOOKS/>
+        <Comunicacion/>
         <Constructor/>
         <Http/>
         <Error/>

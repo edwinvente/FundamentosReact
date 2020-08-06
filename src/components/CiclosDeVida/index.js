@@ -1,1 +1,1 @@
-export {default} from './ComponentDidUpdate'
+export {default} from './componentWillUnmount'

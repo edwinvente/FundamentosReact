@@ -1,0 +1,52 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.Carrousel{
+    width: 100vh;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.Carrousel_Img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.Carrousel_Buttons{
+    position: absolute;
+    top: 0.5em;
+    z-index: 10;
+}
+
+/* cuando se monta */
+.slide-senter{
+    position: absolute;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-enter-active{
+    position: absolute;
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+/* cuando se desmonta */
+.slide-exit{
+    position: absolute;
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.slide-exit-active{
+    position: absolute;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s ease;
+}
