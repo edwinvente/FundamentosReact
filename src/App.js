@@ -26,6 +26,8 @@ import HOOKS from './components/HOOKS'
 import Example from './components/codeSplitingReactLazy' 
 import Transition from './components/AnimacionesyTransicciones'
 import StyleComponents from './components/StyleComponents'
+import Router from './components/ReactRouter'
+import Redux from './components/ReduxLibrarie'
 
 class App extends Component{
   
@@ -45,8 +47,10 @@ class App extends Component{
 
     return(
       <div>
-        <StyleComponents />
+        <Redux />
         {/*
+        <Router />
+        <StyleComponents />
         <Transition />
         <Example />
         <PropChildren/>

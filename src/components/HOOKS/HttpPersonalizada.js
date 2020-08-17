@@ -30,7 +30,7 @@ const App = () =>{
     const urlApi = 'https://jsonplaceholder.typicode.com/users'
     const urlApiUser = 'https://jsonplaceholder.typicode.com/users/' + clicks
     
-    const [user, loading] = useFetch(urlApiUser)
+    const [user, loading] = useFetch(urlApiUser) 
 
     const add = () => setCliks(clicks + 1)
 

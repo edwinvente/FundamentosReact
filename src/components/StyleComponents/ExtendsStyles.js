@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Styled from 'styled-components'
 
 const Header = Styled.header`
@@ -30,9 +30,36 @@ const SpecialButton = Styled(Button)`
 
 `
 
-const Move = () => {
+const Move = ({className}) => {
     
+    const [mouseX, setMouseX] = useState(0)
+    
+    const handleMove = (e) => {
+        setMouseX(e.clientX)
+    }
+
+    useEffect(() => {
+        
+        window.addEventListener('mousemove', handleMove)
+
+        return () => {
+            window.removeEventListener('mousemove', handleMove)
+        }
+    }, [])
+
+    return(
+        <dvi className={className}>
+            {mouseX}
+        </dvi>
+    )   
 }
+
+const MoveStyled = Styled(Move)`
+    background:yellow;
+    font-size:30px;
+    height: 200px;
+    text-align:center;
+`
 
 const App = () => {
 
@@ -54,6 +81,7 @@ const App = () => {
             <SpecialButton>
                 New Button
             </SpecialButton>
+            <MoveStyled />
         </div>
     )
 }

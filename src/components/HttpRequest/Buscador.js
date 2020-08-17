@@ -6,7 +6,7 @@ class Formulario extends Component {
     handleSubmit = (e) => {
         this.props.onRequest(e)
     }
-
+ 
     render() {
         return (
             <div>

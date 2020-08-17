@@ -18,8 +18,8 @@ class Http extends Component{
         
         /* axios.get('https://jsonplaceholder.typicode.com/photos').
             then(res => {
-                this.setState({pothos: res.data})
-            }) */
+                this.setState({pothos: res.data}) 
+            }) */ 
     }
     
     render(){

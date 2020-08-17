@@ -1,1 +1,1 @@
-export {default} from './ExtendsStyles'
+export {default} from './animacion2'
