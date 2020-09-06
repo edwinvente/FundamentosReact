@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../Actions/Counter'
+import { INCREMENT, DECREMENT } from '../Actions/CounterActions'
  
 //Reducer
 //funcion que nos retorna el estado actual
